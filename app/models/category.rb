@@ -1,8 +1,8 @@
 class Category < ActiveRecord::Base
-  has_many :video_categories
-  has_many :videos, through: :video_categories
+  has_many :videos, -> { order(title: :desc) }, foreign_key: :category_id 
 
   def recent_videos
-    videos.limit(6)
+    videos.first(6)
   end
+
 end
