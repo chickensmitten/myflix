@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Category do
   it {should have_many(:videos)}
+  it { should validate_presence_of(:name)}
   describe "#recent_videos" do
     it "returns the videos in the reverse chronnical order by created at" do
       comedies = Category.create(name: "comedies")
@@ -34,6 +35,7 @@ describe Category do
       comedies = Category.create(name: "comedies")
       expect(comedies.recent_videos).to eq([])
     end
+
   end
 end
 

@@ -11,6 +11,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'fabrication'
+gem 'faker'
 
 group :development do
   gem 'sqlite3'
@@ -23,10 +24,14 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'rspec-rails', '2.99'
+  gem 'letter_opener'
 end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'launchy'
+  gem 'capybara'
+  gem 'capybara-email'
 end
 
 group :test do
