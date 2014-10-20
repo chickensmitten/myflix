@@ -15,6 +15,7 @@ gem 'faker'
 gem 'mailgunner'
 gem 'sidekiq'
 gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
+gem 'paratrooper'
 
 group :development do
   gem 'sqlite3'
