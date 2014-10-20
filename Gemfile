@@ -13,6 +13,8 @@ gem 'bcrypt-ruby'
 gem 'fabrication'
 gem 'faker'
 gem 'mailgunner'
+gem 'sidekiq'
+gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
 
 group :development do
   gem 'sqlite3'
