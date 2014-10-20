@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'fabrication'
 gem 'faker'
+gem 'mailgunner'
 
 group :development do
   gem 'sqlite3'
