@@ -1,7 +1,11 @@
 class Video < ActiveRecord::Base
   belongs_to :category, foreign_key: :category_id
   has_many :reviews, -> { order("created_at DESC") }
+  has_many :queue_items
 
+  mount_uploader :large_cover, LargeCoverUploader
+  mount_uploader :small_cover, SmallCoverUploader
+  
   validates :title, presence: true
   validates :description, presence: true
 
