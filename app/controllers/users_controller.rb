@@ -17,7 +17,7 @@ class UsersController < ApplicationController
         :card => params[:stripeToken], # obtained with Stripe.js
         :description => "Sign up charge for #{@user.email}"
       )     
-      AppMailer.delay.send_welcome_email(@user)
+      AppMailer.send_welcome_email(@user).deliver
       redirect_to sign_in_path
     else
       render :new
