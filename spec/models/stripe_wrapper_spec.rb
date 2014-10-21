@@ -10,14 +10,14 @@ describe StripeWrapper do
             :number => "4242424242424242",
             :exp_month => 10,
             :exp_year => 2018,
-            :cvc => "314"
+            :cvc => 314
           },   
         ).id
 
         response = StripeWrapper::Charge.create(
-          amount: 999,
-          card: token,
-          description: "a valid charge"
+            amount: 999,
+            card: token,
+            description: "a valid charge"
           )     
 
         expect(response.amount).to eq(999)
