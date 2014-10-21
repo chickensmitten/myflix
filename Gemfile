@@ -19,6 +19,8 @@ gem 'paratrooper'
 gem 'unicorn'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'stripe'
+gem 'figaro'
 
 group :development do
   gem 'sqlite3'
@@ -41,10 +43,8 @@ group :test do
   gem 'capybara-email'
   gem 'vcr'
   gem 'webmock'
-end
-
-group :test do
-  gem 'database_cleaner', '1.2.0'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
 end
 
 group :production do
