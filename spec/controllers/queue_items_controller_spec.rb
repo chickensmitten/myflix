@@ -138,7 +138,7 @@ describe QueueItemsController do
       let(:alice) {Fabricate(:user)}      
       let(:video) {Fabricate(:video)}
       let(:queue_item1) {Fabricate(:queue_item, user: alice, position:1, video: video)}
-      let(:queue_item2) {Fabricate(:queue_item, user: alice, position:1, video: video)}      
+      let(:queue_item2) {Fabricate(:queue_item, user: alice, position:2, video: video)}      
       
       before do
         set_current_user(alice)
